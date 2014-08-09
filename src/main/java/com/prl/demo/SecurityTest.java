@@ -11,10 +11,12 @@ import javax.crypto.KeyGenerator;
 import javax.crypto.NoSuchPaddingException;
 
 public class SecurityTest {
+	
+	public static final String AlgorithName = "AES";
 
 	public static void main(String[] args) throws NoSuchAlgorithmException, NoSuchPaddingException, InvalidKeyException, IllegalBlockSizeException, BadPaddingException {
-		Cipher cipher = Cipher.getInstance("AES");
-		Key securityKey = KeyGenerator.getInstance("AES").generateKey();
+		Cipher cipher = Cipher.getInstance(AlgorithName);
+		Key securityKey = KeyGenerator.getInstance(AlgorithName).generateKey();
 		cipher.init(Cipher.ENCRYPT_MODE, securityKey);
 		byte[] result = cipher.doFinal("helloworld".getBytes());
 		System.out.println(new String(result));
