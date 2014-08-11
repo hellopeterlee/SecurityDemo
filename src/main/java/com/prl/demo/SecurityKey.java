@@ -1,14 +1,11 @@
 package com.prl.demo;
 
-import java.security.InvalidKeyException;
 import java.security.Key;
-import java.security.NoSuchAlgorithmException;
 import java.security.spec.KeySpec;
-import javax.crypto.BadPaddingException;
+import java.util.Random;
+
 import javax.crypto.Cipher;
-import javax.crypto.IllegalBlockSizeException;
 import javax.crypto.KeyGenerator;
-import javax.crypto.NoSuchPaddingException;
 import javax.crypto.SecretKey;
 import javax.crypto.SecretKeyFactory;
 import javax.crypto.spec.PBEKeySpec;
@@ -41,6 +38,10 @@ public class SecurityKey {
 	}
 
 	public static void test2() throws Exception {
+		
+		Random r = new Random();  
+		r.nextBytes(Salt);
+		
 		KeySpec keySpec = new PBEKeySpec(Password.toCharArray());
 		SecretKey key = SecretKeyFactory.getInstance(AlgorithPBE).generateSecret(keySpec);
 		PBEParameterSpec parameterSpec = new PBEParameterSpec(Salt, 1000);
