@@ -15,7 +15,7 @@ import javax.crypto.spec.PBEKeySpec;
 import javax.crypto.spec.PBEParameterSpec;
 
 @SuppressWarnings("unused")
-public class SecurityTest {
+public class SecurityKey {
 	public static final String AlgorithAES = "AES";
 	public static final String AlgorithPBE = "PBEWithMD5AndDES";
 	public static String SrcString = "helloworld";
