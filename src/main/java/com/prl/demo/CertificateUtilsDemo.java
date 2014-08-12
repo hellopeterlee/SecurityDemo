@@ -38,7 +38,5 @@ public class CertificateUtilsDemo {
 		byte[] result = CertificateUtils.decryptByPublicKey(encryptedData, CertFile);
 		System.out.println(new String(result));
 	}
-	
-	
 
 }
