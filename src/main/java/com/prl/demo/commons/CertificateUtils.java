@@ -26,7 +26,7 @@ import java.util.Date;
 import javax.crypto.Cipher;
 
 public class CertificateUtils {
-
+	
 	public static final String KEY_STORE = "JKS";
 	public static final String X509 = "X.509";
 	private static final int CACHE_SIZE = 2048;

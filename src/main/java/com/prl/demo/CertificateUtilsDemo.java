@@ -10,10 +10,10 @@ public class CertificateUtilsDemo {
 	public final static String SrcString = "helloworld";
 
 	public static void main(String[] args) throws Exception {
-//		signDemo();
+		signDemo();
 		cipherDemo();
 	}
-
+	
 	public static void signDemo() throws Exception {
 		//简单的
 		String sign = CertificateUtils.signToBase64(SrcString.getBytes(), KeyStorePath, KeystoreAlias, KeyStorePassword);
